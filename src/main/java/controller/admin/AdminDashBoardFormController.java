@@ -25,4 +25,19 @@ public class AdminDashBoardFormController {
         stage.centerOnScreen();
         stage.show();
     }
+    @FXML
+    void btnBranchesOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnTransactionOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnUserOnAction(ActionEvent event) {
+
+    }
+
 }
