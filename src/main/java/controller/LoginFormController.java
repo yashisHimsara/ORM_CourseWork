@@ -17,7 +17,7 @@ public class LoginFormController {
     }
     @FXML
     void AdminClickOnAction(MouseEvent event) throws IOException {
-        Parent node = FXMLLoader.load(this.getClass().getResource("/view/admin.fxml"));
+        Parent node = FXMLLoader.load(this.getClass().getResource("/view/admin/admin.fxml"));
         this.SubAnchorPane.getChildren().clear();
         this.SubAnchorPane.getChildren().add(node);
     }
@@ -27,7 +27,7 @@ public class LoginFormController {
     }
 
     private void userPage() throws IOException {
-        Parent node = FXMLLoader.load(this.getClass().getResource("/view/user.fxml"));
+        Parent node = FXMLLoader.load(this.getClass().getResource("/view/user/user.fxml"));
         this.SubAnchorPane.getChildren().clear();
         this.SubAnchorPane.getChildren().add(node);
     }
