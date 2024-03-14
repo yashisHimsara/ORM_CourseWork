@@ -18,7 +18,7 @@
                 <TableColumn fx:id="colReturnDate" prefWidth="189.0" text="Return Date" />
             </columns>
         </TableView>
-        <JFXTextField fx:id="txtSearch" layoutX="34.0" layoutY="40.0" prefHeight="25.0" prefWidth="177.0">
+        <JFXTextField fx:id="txtSearch" layoutX="34.0" layoutY="40.0" prefHeight="25.0" prefWidth="177.0" promptText="txtSearch">
             <font>
                 <Font size="15.0" />
             </font>

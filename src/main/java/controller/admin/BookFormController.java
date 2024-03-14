@@ -60,4 +60,7 @@ public class BookFormController {
 
     public void SearchOnAction(MouseEvent mouseEvent) {
     }
+
+    public void btnAddOnAction(ActionEvent actionEvent) {
+    }
 }
