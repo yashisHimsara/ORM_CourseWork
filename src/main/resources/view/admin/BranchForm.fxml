@@ -20,7 +20,7 @@
                 <TableColumn fx:id="colRemove" prefWidth="189.0" text="Remove" />
             </columns>
         </TableView>
-        <JFXTextField fx:id="txtSearch" layoutX="34.0" layoutY="106.0" prefHeight="25.0" prefWidth="177.0" promptText=" Search book" text="Search Branch">
+        <JFXTextField fx:id="txtSearch" layoutX="34.0" layoutY="106.0" opacity="0.47" prefHeight="25.0" prefWidth="177.0" promptText=" Search book" text="Search Branch">
             <font>
                 <Font size="15.0" />
             </font>

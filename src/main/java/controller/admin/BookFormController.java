@@ -1,11 +1,14 @@
 package controller.admin;
 
 import com.jfoenix.controls.JFXTextField;
+import dto.BookDto;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import bo.impl.BookBoimpl;
 
 public class BookFormController {
 
@@ -13,6 +16,10 @@ public class BookFormController {
     public TextField txtBookId1;
     public TextField txtRemove1;
     public TextField txtAuthor1;
+    public TextField txtTitle;
+    @FXML
+    private ComboBox<?> cmbCatougery;
+    public TableColumn colRemove1;
     @FXML
     private TableColumn<?, ?> colAuthor;
 
@@ -40,16 +47,12 @@ public class BookFormController {
     @FXML
     private TextField txtStatus;
 
+    BookBoimpl bookBoimpl = new BookBoimpl();
+
     @FXML
     void bookClikeOnAction(MouseEvent event) {
 
     }
-
-    @FXML
-    void btnAddBookOnAction(ActionEvent event) {
-
-    }
-
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
 
@@ -62,5 +65,14 @@ public class BookFormController {
     }
 
     public void btnAddOnAction(ActionEvent actionEvent) {
+        String id = txtBookId.getText();
+        String title = txtTitle.getText();
+        String autor = txtAuthor.getText();
+        String cat = (String) cmbCatougery.getValue();
+        String status = txtStatus.getText();
+
+        var book = new BookDto(id,title,autor,cat,status);
+
+        boolean isSave = bookBoimpl.saveBook(book);
     }
 }
