@@ -12,13 +12,13 @@
     <children>
         <TableView layoutX="13.0" layoutY="93.0" prefHeight="503.0" prefWidth="834.0">
             <columns>
-                <TableColumn prefWidth="210.0" text="Book Id" />
-                <TableColumn prefWidth="223.0" text="Title" />
-                <TableColumn prefWidth="211.0" text="Date" />
-                <TableColumn prefWidth="189.0" text="Return Date" />
+                <TableColumn fx:id="colBookId" prefWidth="210.0" text="Book Id" />
+                <TableColumn fx:id="colTitle" prefWidth="223.0" text="Title" />
+                <TableColumn fx:id="colDate" prefWidth="211.0" text="Date" />
+                <TableColumn fx:id="colReturnDate" prefWidth="189.0" text="Return Date" />
             </columns>
         </TableView>
-        <JFXTextField layoutX="34.0" layoutY="40.0" prefHeight="25.0" prefWidth="177.0">
+        <JFXTextField fx:id="txtSearch" layoutX="34.0" layoutY="40.0" prefHeight="25.0" prefWidth="177.0">
             <font>
                 <Font size="15.0" />
             </font>

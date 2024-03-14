@@ -14,12 +14,12 @@
 <AnchorPane prefHeight="596.0" prefWidth="861.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.admin.BookFormController">
    <children>
       <TableView layoutX="13.0" layoutY="161.0" prefHeight="435.0" prefWidth="834.0">
-        <columns>
-          <TableColumn fx:id="colBookId" prefWidth="210.0" text="Book Id" />
-          <TableColumn fx:id="colStatus" prefWidth="223.0" text="Status" />
+         <columns>
+            <TableColumn fx:id="colBookId" prefWidth="210.0" text="Book Id" />
+            <TableColumn fx:id="colStatus" prefWidth="223.0" text="Status" />
             <TableColumn fx:id="colAuthor" prefWidth="211.0" text="Author" />
             <TableColumn fx:id="colRemove" prefWidth="189.0" text="Remove" />
-        </columns>
+         </columns>
       </TableView>
       <JFXTextField fx:id="txtSearch" layoutX="33.0" layoutY="107.0" prefHeight="25.0" prefWidth="177.0" promptText=" Search book">
          <font>
@@ -31,11 +31,11 @@
             <Font name="System Bold Italic" size="16.0" />
          </font>
       </JFXButton>
-       <ImageView layoutX="177.0" layoutY="111.0" onMouseClicked="#bookClikeOnAction" opacity="0.53">
-           <image>
-               <Image url="@../../image/icons8-search-24.png" />
-           </image>
-       </ImageView>
+      <ImageView layoutX="177.0" layoutY="111.0" onMouseClicked="#bookClikeOnAction" opacity="0.53">
+         <image>
+            <Image url="@../../image/icons8-search-24.png" />
+         </image>
+      </ImageView>
       <TextField fx:id="txtBookId" layoutX="28.0" layoutY="43.0" promptText="Book Id" />
       <TextField fx:id="txtRemove" layoutX="671.0" layoutY="43.0" promptText="Remove" />
       <TextField fx:id="txtAuthor" layoutX="468.0" layoutY="43.0" promptText="Author" />

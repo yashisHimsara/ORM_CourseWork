@@ -15,29 +15,35 @@ public class AdminDashBoardFormController {
     private AnchorPane AnchorPane1;
 
     @FXML
-    private AnchorPane AnchorPane2;
+    private AnchorPane changeRoot;
 
     public void btnBookOnAction(ActionEvent actionEvent) throws IOException {
-        Parent parent= FXMLLoader.load(getClass().getResource("/view/admin/bookForm.fxml"));
-        Scene scene = new Scene(parent);
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.centerOnScreen();
-        stage.show();
-    }
-    @FXML
-    void btnBranchesOnAction(ActionEvent event) {
+//        Parent parent= FXMLLoader.load(getClass().getResource("/view/admin/bookForm.fxml"));
+//        changeRoot.getChildren().clear();
+//        changeRoot.getChildren().add(parent);
+        changeRoot.getChildren().clear();
+        changeRoot.getChildren().add(FXMLLoader.load(getClass().getResource("/view/admin/bookForm.fxml")));
 
     }
-
     @FXML
-    void btnTransactionOnAction(ActionEvent event) {
-
+    void btnBranchesOnAction(ActionEvent event) throws IOException {
+        Parent parent= FXMLLoader.load(getClass().getResource("/view/admin/BranchForm.fxml"));
+        changeRoot.getChildren().clear();
+        changeRoot.getChildren().add(parent);
     }
 
     @FXML
-    void btnUserOnAction(ActionEvent event) {
+    void btnTransactionOnAction(ActionEvent event) throws IOException {
+        Parent parent= FXMLLoader.load(getClass().getResource("/view/admin/TransactionForm.fxml"));
+        changeRoot.getChildren().clear();
+        changeRoot.getChildren().add(parent);
+    }
 
+    @FXML
+    void btnUserOnAction(ActionEvent event) throws IOException {
+        Parent parent= FXMLLoader.load(getClass().getResource("/view/admin/userForm.fxml"));
+        changeRoot.getChildren().clear();
+        changeRoot.getChildren().add(parent);
     }
 
 }
