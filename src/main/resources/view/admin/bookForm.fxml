@@ -16,10 +16,11 @@
       <TableView layoutX="13.0" layoutY="161.0" prefHeight="435.0" prefWidth="834.0">
         <columns>
           <TableColumn fx:id="colBookId" prefWidth="160.0" text="Book Id" />
-          <TableColumn fx:id="colStatus" prefWidth="197.0" text="Title" />
-            <TableColumn fx:id="colAuthor" prefWidth="170.0" text="Author" />
-            <TableColumn fx:id="colRemove" prefWidth="168.0" text="Category" />
-            <TableColumn fx:id="colRemove1" prefWidth="138.0" text="Status" />
+          <TableColumn fx:id="colTitle" prefWidth="155.0" text="Title" />
+            <TableColumn fx:id="colAuthor" prefWidth="148.0" text="Author" />
+            <TableColumn fx:id="colCategory" prefWidth="146.0" text="Category" />
+            <TableColumn fx:id="colStatus" prefWidth="124.0" text="Status" />
+            <TableColumn fx:id="colRemove" prefWidth="100.0" text="Remove" />
         </columns>
       </TableView>
       <JFXTextField fx:id="txtSearch" layoutX="33.0" layoutY="107.0" opacity="0.6" prefHeight="25.0" prefWidth="177.0" promptText=" Search book">

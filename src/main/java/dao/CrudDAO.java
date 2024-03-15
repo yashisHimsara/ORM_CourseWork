@@ -9,4 +9,5 @@ public interface CrudDAO <T> extends SuperDAO{
     boolean isExists(String id);
     T search(String id);
     boolean delete(String id);
+    boolean borrwbook(String id);
 }

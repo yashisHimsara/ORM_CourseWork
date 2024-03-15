@@ -25,33 +25,35 @@ public class BookBoimpl implements BookBO {
         List<BookDto> allBooks = new ArrayList<>();
 
         for (Book book:all) {
-            allBooks.add(new BookDto())
+            allBooks.add(new BookDto(book.getId(),book.getTitle(),book.getAuthor(), book.getCatougery(), book.getStatus()));
         }
-        return null;
+        return allBooks;
     }
 
     @Override
     public boolean updateBook(BookDto dto) {
-        return false;
+        return bookDAO.update(new Book(dto.getId(), dto.getTitle(), dto.getAuthor(), dto.getCatougery(), dto.getStatus()));
     }
 
     @Override
     public boolean isExistBook(String id) {
-        return false;
+        return bookDAO.isExists(id);
     }
 
     @Override
     public BookDto searchBook(String id) {
-        return null;
+        Book search = bookDAO.search(id);
+        BookDto bookDto = new BookDto(search.getId(), search.getTitle(), search.getAuthor(), search.getCatougery(), search.getStatus());
+        return bookDto;
     }
 
     @Override
     public boolean deleteBook(String id) {
-        return false;
+        return bookDAO.delete(id);
     }
 
     @Override
     public boolean borrowBook(String id) {
-        return false;
+        return bookDAO.borrwbook(id);
     }
 }
