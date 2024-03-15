@@ -2,10 +2,11 @@ package dao.impl;
 
 import Entity.Book;
 import configaration.FactoryConfiguration;
+import dao.BookDAO;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-public class BookDaoimpl {
+public class BookDaoimpl implements BookDAO {
     public boolean save(Book book1) {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
